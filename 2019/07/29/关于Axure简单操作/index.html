@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="学习html基础用法">
+        <meta property="og:title" content="关于Axure简单操作">
     
 
     <!--Open Graph Description-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>学习html基础用法 - JJ&#39;s Blog</title>
+    <title>关于Axure简单操作 - JJ&#39;s Blog</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
@@ -124,8 +124,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">学习html基础用法</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2019-07-30</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">关于Axure简单操作</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2019-07-29</p>
         </div>
     </div>
 
@@ -145,44 +145,75 @@
                     
 
                     <!-- Main Post Content -->
-                    <h1 id="html"><a href="#html" class="headerlink" title="html"></a>html</h1><h2 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h2><ul>
-<li>简单介绍<br> html 又叫超级文本标记语言，其中包括字符，图片，超链接，视频，音频，载体是通过文档来实现的.</li>
-<li>架构<br> 建立于B/S架构 B为浏览器/S为服务器</li>
-<li>网络概念<br> Http 超文本传输协议<br> url  统一资源定位符<br> uri  统一资源标识符<h2 id="二、html网页编写"><a href="#二、html网页编写" class="headerlink" title="二、html网页编写"></a>二、html网页编写</h2></li>
-<li>开发流程<ol>
-<li>编写网页(我用的是sublime和vscode)</li>
-<li>本地测试</li>
-<li>部署(linux)将本地的html网页上传至云服务器，并且部署到apache静态服务器上.</li>
-<li>网络测试</li>
-</ol>
-</li>
-<li>网页元素<ul>
-<li>注释<br> 格式:<code>&lt;!--注释内容--&gt;</code><br> <code>&lt;option value=&quot;&quot;&gt;&lt;/option&gt;</code></li>
-<li>属性<ol>
-<li>核心属性<br>1.1 id   文档内部唯一标识</li>
-<li>特有属性</li>
-<li>拓展属性</li>
-</ol>
-</li>
-<li>结构</li>
-<li>元素<ol>
-<li>块元素</li>
-<li>行内元素</li>
-<li>功能元素<ul>
-<li>表格</li>
-<li>表单</li>
+                    <h1 id="Axure"><a href="#Axure" class="headerlink" title="Axure"></a>Axure</h1><h2 id="一、Axure基础用法"><a href="#一、Axure基础用法" class="headerlink" title="一、Axure基础用法"></a>一、Axure基础用法</h2><ul>
+<li><p>软件环境</p>
+<ul>
+<li>尽量使用英文环境！</li>
 </ul>
 </li>
-<li>子元素</li>
+<li><p>简单元件的使用</p>
+<ul>
+<li>元件在Axure中就是page.</li>
+<li>元件–&gt;box、image、video、表单元件<ol>
+<li>box属性包括 width()、height()、background()、padding()、margin()、border()同样可以设置宽高颜色、anmation()等等.</li>
+<li>image、video是插入图片和视频，使用时只需要添加所需图片和视频地址即可.</li>
+<li>表单元件包括一些复选框Checkbox，单选框radio Button等等以及input的函数操作可以用来进行交互.</li>
 </ol>
 </li>
 </ul>
 </li>
-<li>应用实例<ul>
-<li>课程表</li>
-<li>个人简历</li>
+<li><p>页面布局</p>
+<ul>
+<li>Axure通过把Box作为容器,然后添加一些页面所需要的元件例如table、span来布局.</li>
+<li>布局流程<ol>
+<li>从上往下，从外往内</li>
+<li>行级布局</li>
+<li>列级布局</li>
+</ol>
+</li>
 </ul>
 </li>
+</ul>
+<h2 id="二、稍微深层次用法"><a href="#二、稍微深层次用法" class="headerlink" title="二、稍微深层次用法"></a>二、稍微深层次用法</h2><ul>
+<li><p>内置元件</p>
+<ul>
+<li>基础元件（box,段落,标题…）</li>
+<li>高级元件（内联框架,中继器）<ul>
+<li>中继器使用：数据插入-&gt;驱动-&gt;页面（模板）每一个中继器复制增加两行</li>
+</ul>
+</li>
+<li>表单元件（单行、多行文本框,单选按钮,复选框,下拉菜单）</li>
+<li>表格与菜单（table）</li>
+<li>图标(icons)需要用到图标就在icons中选取，没有的可以在阿里云图库中选取，只不过需要插入一些阿里云拓展插件.</li>
+</ul>
+</li>
+<li><p>事件机制</p>
+<ul>
+<li>事件源-&gt;元素</li>
+<li>事件处理函数<ul>
+<li>事件处理函数包括显示隐藏，行列的添加删除，页面的跳转等等用来对动态框，模态框，表格的增删改查等一系列的操作.</li>
+</ul>
+</li>
+<li>事件对象</li>
+</ul>
+</li>
+<li><p>第三方元件库</p>
+<ul>
+<li>如果在Axure找不到的元件需要插入第三方元件库.</li>
+</ul>
+</li>
+</ul>
+<h2 id="三、Axure利用Svn进行团队合作"><a href="#三、Axure利用Svn进行团队合作" class="headerlink" title="三、Axure利用Svn进行团队合作"></a>三、Axure利用Svn进行团队合作</h2><ul>
+<li>Svn原理<ol>
+<li>服务器端 服务器地址 subversion</li>
+<li>客户端 Axure中team分享项目到服务器端中的subversion里的仓库中，地址为svn://xx.xx.xx.xx/xxxx/xxxx/xx</li>
+<li>版本控制 checkout 修改的时候，操作. checkin 修改完毕，操作  team-&gt;gel all changes…</li>
+</ol>
+</li>
+</ul>
+<h2 id="四、简单应用-等我学会了部署云服务器了之后再上传"><a href="#四、简单应用-等我学会了部署云服务器了之后再上传" class="headerlink" title="四、简单应用(等我学会了部署云服务器了之后再上传)"></a>四、简单应用(等我学会了部署云服务器了之后再上传)</h2><ul>
+<li>Newbalance主页重构</li>
+<li>手机喜鹊儿APP</li>
 </ul>
 
                     
