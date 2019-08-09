@@ -146,26 +146,100 @@
 
                     <!-- Main Post Content -->
                     <p>#css</p>
-<h2 id="一、简单介绍"><a href="#一、简单介绍" class="headerlink" title="一、简单介绍"></a>一、简单介绍</h2><pre><code>* 层叠样式表
+<h2 id="一、简单介绍"><a href="#一、简单介绍" class="headerlink" title="一、简单介绍"></a>一、简单介绍</h2><pre><code>1. 层叠样式表
 层叠指1.多个样式表修饰同一个元素
-2.继承
-3.优先级
+2. 继承
+3. 优先级
 样式表
 {
     color：#fff;
-}</code></pre><h2 id="二、html中如何应用cs"><a href="#二、html中如何应用cs" class="headerlink" title="二、html中如何应用cs"></a>二、html中如何应用cs</h2><pre><code>* (1) 在元素中添加style属性，style属性值为css样式规则
+}</code></pre><h2 id="二、html中如何应用css"><a href="#二、html中如何应用css" class="headerlink" title="二、html中如何应用css"></a>二、html中如何应用css</h2><pre><code>1. 在元素中添加style属性，style属性值为css样式规则
 如
 `&lt;div style=&quot;width:100px; height:100px;&quot;&gt;&lt;/div&gt;`
 优点：优先级高。简单直接
 缺点：样式与结构杂糅
-* (2) 将样式添加到head标签的style标签里
+2. 将样式添加到head标签的style标签里
   如
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> 选择器&#123;</span><br><span class="line"> 	属性名：属性值</span><br><span class="line"> &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 
-* (3) 讲样式定义在css文件中，通过link导入进来</code></pre><h2 id="三、语法"><a href="#三、语法" class="headerlink" title="三、语法"></a>三、语法</h2><pre><code>* 选择器{
+3. 讲样式定义在css文件中，通过link导入进来</code></pre><h2 id="三、语法"><a href="#三、语法" class="headerlink" title="三、语法"></a>三、语法</h2><pre><code>1. 选择器{
     样式名：样式值；
     样式名：样式值；
-}</code></pre><h2 id="四、选择器"><a href="#四、选择器" class="headerlink" title="四、选择器"></a>四、选择器</h2>
+}</code></pre><h2 id="四、选择器"><a href="#四、选择器" class="headerlink" title="四、选择器"></a>四、选择器</h2><pre><code>1. 核心选择器
+   1. 标签选择器
+   div{}
+   2. id选择器
+   #id{}
+   3. class选择器
+   .class{}
+   4. 组合选择器
+   div#one{}
+   5. 逗号选择器
+   div,.class{}
+   6. 普遍选择器
+   *{}不单独使用
+2. 层次选择器
+   1. 子元素选择器 
+   div&gt;ul&gt;li{}
+   2. 后代选择器
+   div ul{}
+   3. 下一个兄弟选择器
+   .product&gt;li.ios+*{}
+   4. 之后所有兄弟选择器
+   .product&gt;li.ios~*{}
+3. 属性选择器
+selector[]
+input[placeholder]选择有属性为placeholder的一项
+input[type=text]属性为text
+input[type^=t]属性第一个为t
+input[type$=text]属性最后一个为t
+input[type*text]属性含有t
+4. 伪类选择器
+   1. 与状态相关
+   :link a标签还未被访问过
+   :hover 光标悬浮到元素上
+   :active a标签激活
+   :isited a标签访问过
+   2. 与子元素相关
+   :first-child&amp;nbsp&amp;nbsp第一个孩子
+   :last-child&amp;nbsp&amp;nbsp最后一个孩子
+   :nth-child(v)  v可以为数字，公式，关键字&amp;nbsp&amp;nbsp第几个孩子
+5. 伪元素选择器
+   1. ::after &amp;nbsb::before &amp;nbsp ::first-letter
+   副作用:在dom节点中产生一个新节点</code></pre><h2 id="五、规则"><a href="#五、规则" class="headerlink" title="五、规则"></a>五、规则</h2><pre><code>1. 字体样式
+   font-family:&quot;微软雅黑&quot;,&quot;Microsoft YaHei&quot;,&quot;宋体&quot;,serif;
+   font-size:12px;&amp;nbsp字体大小,浏览器默认字体为16px
+   font-weight:bold;字体粗细 normal&amp;nbsp 正常 &amp;nbspbolder&amp;nbsp 变粗
+   font-style:normal;    是否开启斜体
+   line-height:2em; 行高【文本垂直居中】
+   font:style weight size/line-height family;速写形式
+   网络字体:主要用于字体图标库（iconfont/fontawesome）
+   使用步骤：
+      1) 在iconfont网站中选择图标，加入项目，产生代码
+      2) 将产生的代码在html中通过link引用 http://at.alicdn.com/t/font_1328534_f3dyyeuoew.css        
+      3) 应用css中定义好的类，来使用对应的图标
+2. 文本样式
+   color:#333;字体颜色
+   text-align:center    【文本水平居中】
+   text-decoration-line
+      underline
+      line-through
+      overline
+      none
+   text-decoration-style
+      solid
+      dotted
+      double
+      dashed
+      wavy
+      ...
+   text-decoration-color
+      颜色
+  text-decoration:none;    字体装饰
+  text-indent:2em;             文本缩进
+  text-shadow:12px 2px 3px #ccc;
+3. 列表样式
+4. 盒子样式</code></pre>
                     
                     <!-- Tags Bottom -->
                     
