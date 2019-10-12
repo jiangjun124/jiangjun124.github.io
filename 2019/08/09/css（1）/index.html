@@ -146,100 +146,61 @@
 
                     <!-- Main Post Content -->
                     <p>#css</p>
-<h2 id="一、简单介绍"><a href="#一、简单介绍" class="headerlink" title="一、简单介绍"></a>一、简单介绍</h2><pre><code>1. 层叠样式表
-层叠指1.多个样式表修饰同一个元素
-2. 继承
-3. 优先级
-样式表
-{
-    color：#fff;
-}</code></pre><h2 id="二、html中如何应用css"><a href="#二、html中如何应用css" class="headerlink" title="二、html中如何应用css"></a>二、html中如何应用css</h2><pre><code>1. 在元素中添加style属性，style属性值为css样式规则
-如
-`&lt;div style=&quot;width:100px; height:100px;&quot;&gt;&lt;/div&gt;`
-优点：优先级高。简单直接
-缺点：样式与结构杂糅
-2. 将样式添加到head标签的style标签里
-  如
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> 选择器&#123;</span><br><span class="line"> 	属性名：属性值</span><br><span class="line"> &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="一、简单介绍"><a href="#一、简单介绍" class="headerlink" title="一、简单介绍"></a>一、简单介绍</h2><ol>
+<li><p>层叠样式表<br>  层叠指:<br>  1.1 多个样式表修饰同一个元素<br>  1.2 继承<br>  1.3 优先级<br>  样式表:<br>  {</p>
+<pre><code>color：#fff;</code></pre><p>  }</p>
+<h2 id="二、html中如何应用css"><a href="#二、html中如何应用css" class="headerlink" title="二、html中如何应用css"></a>二、html中如何应用css</h2><ol>
+<li><p>在元素中添加style属性，style属性值为css样式规则<br>如<br><code>&lt;div style=&quot;width:100px; height:100px;&quot;&gt;&lt;/div&gt;</code><br>优点：优先级高。简单直接<br>缺点：样式与结构杂糅</p>
+</li>
+<li><p>将样式添加到head标签的style标签里<br>&nbsp;如:<br>```<style></p>
+<pre><code>选择器{
+    属性名：属性值
+}</code></pre><p>  </style></p>
+</li>
+<li><p>讲样式定义在css文件中，通过link导入进来</p>
+<h2 id="三、语法"><a href="#三、语法" class="headerlink" title="三、语法"></a>三、语法</h2></li>
+<li><p>选择器{<br>   样式名：样式值；<br>   样式名：样式值；<br>}</p>
+<h2 id="四、选择器"><a href="#四、选择器" class="headerlink" title="四、选择器"></a>四、选择器</h2></li>
+<li><p>核心选择器<br>  (1) 标签选择器</p>
+<pre><code>&amp;emsp;div{}</code></pre><p>  (2) id选择器</p>
+<pre><code>&amp;emsp;#id{}</code></pre><p>  (3) class选择器</p>
+<pre><code>&amp;emsp;.class{}</code></pre><p>  (4) 组合选择器</p>
+<pre><code>&amp;emsp;div#one{}</code></pre><p>  (5) 逗号选择器</p>
+<pre><code>&amp;emsp;div,.class{}</code></pre><p>  (6) 普遍选择器</p>
+<pre><code>&amp;emsp;*{}不单独使用</code></pre></li>
+<li><p>层次选择器<br>  (1) 子元素选择器<br>  &emsp;div&gt;ul&gt;li{}<br>  (2) 后代选择器<br>  &emsp;div ul{}<br>  (3) 下一个兄弟选择器<br>  &emsp;.product&gt;li.ios+<em>{}<br>  (4) 之后所有兄弟选择器<br>  &emsp;.product&gt;li.ios~</em>{}</p>
+</li>
+<li><p>属性选择器<br>&emsp;selector[]<br>&emsp;input[placeholder]选择有属性为placeholder的一项<br>&emsp;input[type=text]属性为text<br>&emsp;input[type^=t]属性第一个为t<br>&emsp;input[type$=text]属性最后一个为t<br>&emsp;input[type*text]属性含有t</p>
+</li>
+<li><p>伪类选择器<br>  (1) 与状态相关<br>  &emsp;:link a标签还未被访问过<br>  &emsp;:hover 光标悬浮到元素上<br>  &emsp;:active a标签激活<br>  &emsp;:isited a标签访问过<br>  (2) 与子元素相关<br>  &emsp;:first-child&amp;nbsp&amp;nbsp第一个孩子<br>  &emsp;:last-child&amp;nbsp&amp;nbsp最后一个孩子<br>  &emsp;:nth-child(v)  v可以为数字，公式，关键字&amp;nbsp&amp;nbsp第几个孩子</p>
+</li>
+<li><p>伪元素选择器<br>  (1) ::after &amp;nbsb::before &amp;nbsp ::first-letter<br>  &emsp;副作用:在dom节点中产生一个新节点</p>
+<h2 id="五、规则"><a href="#五、规则" class="headerlink" title="五、规则"></a>五、规则</h2></li>
+<li><p>字体样式<br>  &emsp;font-family:&emsp;”微软雅黑”,”Microsoft YaHei”,”宋体”,serif;<br>  &emsp;font-size:&emsp;12px;&emsp;字体大小,浏览器默认字体为16px<br>  &emsp;font-weight:&emsp;bold;字体粗细 normal&amp;nbsp 正常 &amp;nbspbolder&amp;nbsp 变粗<br>  &emsp;font-style:&emsp;normal;是否开启斜体<br>  &emsp;line-height:&emsp;2em;行高【文本垂直居中】<br>  &emsp;font:&emsp;style weight size/line-height family;速写形式<br>  &emsp;网络字体:主要用于字体图标库（iconfont/fontawesome）<br>  使用步骤：</p>
+<pre><code>&amp;emsp;1) 在iconfont网站中选择图标，加入项目，产生代码
+&amp;emsp;2) 将产生的代码在html中通过link引用 </code></pre><p>  &emsp;&emsp; <a href="http://at.alicdn.com/t/font_1328534_f3dyyeuoew.css" target="_blank" rel="noopener">http://at.alicdn.com/t/font_1328534_f3dyyeuoew.css</a>        </p>
+<pre><code>&amp;emsp;3) 应用css中定义好的类，来使用对应的图标</code></pre><ol start="2">
+<li><p>文本样式<br>color:&emsp;#333;字体颜色<br>text-align:&emsp;center    【文本水平居中】<br>text-decoration-line:<br>  &emsp;underline<br>  &emsp;line-through<br>  &emsp;overline<br>  &emsp;none<br>text-decoration-style:<br>  &emsp;solid<br>  &emsp;dotted<br>  &emsp;double<br>  &emsp;dashed<br>  &emsp;wavy<br>  &emsp;…<br>text-decoration-color:<br>  &emsp;颜色<br>&emsp;text-decoration:none:;字体装饰<br>&emsp;text-indent:2em;             文本缩进<br>&emsp;text-shadow:12px 2px 3px #ccc; 设置阴影</p>
+</li>
+<li><p>列表样式<br>&emsp;list-style-type<br>&emsp;&emsp;circle<br>&emsp;&emsp;square<br>&emsp;&emsp;…<br>&emsp;list-style-image<br>&emsp;&emsp;url(‘’)<br>&emsp;list-style-position<br>&emsp;&emsp;outside<br>&emsp;&emsp;inside<br>&emsp;list-style:none;</p>
+</li>
+<li><p>盒子样式</p>
+<ul>
+<li>width：宽度</li>
+<li>height：高度</li>
+<li>margin(外边距设置)<br>margin-top<br>margin-right<br>margin-bottom<br>margin-left<br>margin 速写<br>margin:10px;        上右下左<br>margin:0 10px;     上下为0，左右10px<br>margin:0 5px 10px;     上0，左右5px，下10px<br>margin:0 5px 10px 15px;     上右下左<br></li>
+<li>border(边框设置))<br>border-top-style     边框线类型<br>border-top-width     边框宽度<br>border-top-color     边框线颜色<br>border-top<br>border-right-style     边框线类型<br>border-right-width     边框宽度<br>border-right-color     边框线颜色<br>border-right<br>border-bottom-style     边框线类型<br>border-bottom-width     边框宽度<br>border-bottom-color     边框线颜色<br>border-bottom<br>border-left-style     边框线类型<br>border-left-width     边框宽度<br>border-left-color     边框线颜色<br>border-left<br>border-color<br>border-style<br>border-width<br>border:1px solid #ededed; 【*】<br>border-radius     圆角半径<br></li>
+<li>padding(内边距设置)<br>padding-top<br>padding-right<br>padding-bottom<br>padding-left<br></li>
+<li>box_shadow(盒子阴影设置)<br>box-shadow: 5px 5px 10px #ccc;<br>box-shadow:inset 0 0 3px lightblue;</li>
+<li>background(背景设置))<br>background-origin     背景铺设的起点<br>border-box         边框下<br>padding-box     内边距下<br>content-box     内容下<br>  background-image         背景图片<br>   url<br>  background-repeat     背景重复方式<br>repeat-x<br>repeat-y<br>no-repeat<br>  background-color         背景颜色<br>   颜色：<br>  background-position 背景位置<br>center<br>top left<br>10px 20px<br>background-clip         背景裁切方式<br>border-box         边框下<br>padding-box     内边距下<br>content-box     内容下<br>background                     速写<br>background:url(‘’) no-repeat center;<br>background-size:cover;<br>=&gt;<br>background:center/cover padding-box url(‘’) no-repeat ; 不重复</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
 
-3. 讲样式定义在css文件中，通过link导入进来</code></pre><h2 id="三、语法"><a href="#三、语法" class="headerlink" title="三、语法"></a>三、语法</h2><pre><code>1. 选择器{
-    样式名：样式值；
-    样式名：样式值；
-}</code></pre><h2 id="四、选择器"><a href="#四、选择器" class="headerlink" title="四、选择器"></a>四、选择器</h2><pre><code>1. 核心选择器
-   1. 标签选择器
-   div{}
-   2. id选择器
-   #id{}
-   3. class选择器
-   .class{}
-   4. 组合选择器
-   div#one{}
-   5. 逗号选择器
-   div,.class{}
-   6. 普遍选择器
-   *{}不单独使用
-2. 层次选择器
-   1. 子元素选择器 
-   div&gt;ul&gt;li{}
-   2. 后代选择器
-   div ul{}
-   3. 下一个兄弟选择器
-   .product&gt;li.ios+*{}
-   4. 之后所有兄弟选择器
-   .product&gt;li.ios~*{}
-3. 属性选择器
-selector[]
-input[placeholder]选择有属性为placeholder的一项
-input[type=text]属性为text
-input[type^=t]属性第一个为t
-input[type$=text]属性最后一个为t
-input[type*text]属性含有t
-4. 伪类选择器
-   1. 与状态相关
-   :link a标签还未被访问过
-   :hover 光标悬浮到元素上
-   :active a标签激活
-   :isited a标签访问过
-   2. 与子元素相关
-   :first-child&amp;nbsp&amp;nbsp第一个孩子
-   :last-child&amp;nbsp&amp;nbsp最后一个孩子
-   :nth-child(v)  v可以为数字，公式，关键字&amp;nbsp&amp;nbsp第几个孩子
-5. 伪元素选择器
-   1. ::after &amp;nbsb::before &amp;nbsp ::first-letter
-   副作用:在dom节点中产生一个新节点</code></pre><h2 id="五、规则"><a href="#五、规则" class="headerlink" title="五、规则"></a>五、规则</h2><pre><code>1. 字体样式
-   font-family:&quot;微软雅黑&quot;,&quot;Microsoft YaHei&quot;,&quot;宋体&quot;,serif;
-   font-size:12px;&amp;nbsp字体大小,浏览器默认字体为16px
-   font-weight:bold;字体粗细 normal&amp;nbsp 正常 &amp;nbspbolder&amp;nbsp 变粗
-   font-style:normal;    是否开启斜体
-   line-height:2em; 行高【文本垂直居中】
-   font:style weight size/line-height family;速写形式
-   网络字体:主要用于字体图标库（iconfont/fontawesome）
-   使用步骤：
-      1) 在iconfont网站中选择图标，加入项目，产生代码
-      2) 将产生的代码在html中通过link引用 http://at.alicdn.com/t/font_1328534_f3dyyeuoew.css        
-      3) 应用css中定义好的类，来使用对应的图标
-2. 文本样式
-   color:#333;字体颜色
-   text-align:center    【文本水平居中】
-   text-decoration-line
-      underline
-      line-through
-      overline
-      none
-   text-decoration-style
-      solid
-      dotted
-      double
-      dashed
-      wavy
-      ...
-   text-decoration-color
-      颜色
-  text-decoration:none;    字体装饰
-  text-indent:2em;             文本缩进
-  text-shadow:12px 2px 3px #ccc;
-3. 列表样式
-4. 盒子样式</code></pre>
                     
                     <!-- Tags Bottom -->
                     
