@@ -161,13 +161,8 @@
 <h2 id="三、语法"><a href="#三、语法" class="headerlink" title="三、语法"></a>三、语法</h2></li>
 <li><p>选择器{<br>   样式名：样式值；<br>   样式名：样式值；<br>}</p>
 <h2 id="四、选择器"><a href="#四、选择器" class="headerlink" title="四、选择器"></a>四、选择器</h2></li>
-<li><p>核心选择器<br>  (1) 标签选择器</p>
-<pre><code>&amp;emsp;div{}</code></pre><p>  (2) id选择器</p>
-<pre><code>&amp;emsp;#id{}</code></pre><p>  (3) class选择器</p>
-<pre><code>&amp;emsp;.class{}</code></pre><p>  (4) 组合选择器</p>
-<pre><code>&amp;emsp;div#one{}</code></pre><p>  (5) 逗号选择器</p>
-<pre><code>&amp;emsp;div,.class{}</code></pre><p>  (6) 普遍选择器</p>
-<pre><code>&amp;emsp;*{}不单独使用</code></pre></li>
+<li><p>核心选择器<br>  (1) 标签选择器<br>  &emsp;div{}<br>  (2) id选择器<br>  &emsp;#id{}<br>  (3) class选择器<br>  &emsp;.class{}<br>  (4) 组合选择器<br>  &emsp;div#one{}<br>  (5) 逗号选择器<br>  &emsp;div,.class{}<br>  (6) 普遍选择器<br> &emsp;*{}不单独使用</p>
+</li>
 <li><p>层次选择器<br>  (1) 子元素选择器<br>  &emsp;div&gt;ul&gt;li{}<br>  (2) 后代选择器<br>  &emsp;div ul{}<br>  (3) 下一个兄弟选择器<br>  &emsp;.product&gt;li.ios+<em>{}<br>  (4) 之后所有兄弟选择器<br>  &emsp;.product&gt;li.ios~</em>{}</p>
 </li>
 <li><p>属性选择器<br>&emsp;selector[]<br>&emsp;input[placeholder]选择有属性为placeholder的一项<br>&emsp;input[type=text]属性为text<br>&emsp;input[type^=t]属性第一个为t<br>&emsp;input[type$=text]属性最后一个为t<br>&emsp;input[type*text]属性含有t</p>
@@ -176,10 +171,9 @@
 </li>
 <li><p>伪元素选择器<br>  (1) ::after &amp;nbsb::before &amp;nbsp ::first-letter<br>  &emsp;副作用:在dom节点中产生一个新节点</p>
 <h2 id="五、规则"><a href="#五、规则" class="headerlink" title="五、规则"></a>五、规则</h2></li>
-<li><p>字体样式<br>  &emsp;font-family:&emsp;”微软雅黑”,”Microsoft YaHei”,”宋体”,serif;<br>  &emsp;font-size:&emsp;12px;&emsp;字体大小,浏览器默认字体为16px<br>  &emsp;font-weight:&emsp;bold;字体粗细 normal&amp;nbsp 正常 &amp;nbspbolder&amp;nbsp 变粗<br>  &emsp;font-style:&emsp;normal;是否开启斜体<br>  &emsp;line-height:&emsp;2em;行高【文本垂直居中】<br>  &emsp;font:&emsp;style weight size/line-height family;速写形式<br>  &emsp;网络字体:主要用于字体图标库（iconfont/fontawesome）<br>  使用步骤：</p>
-<pre><code>&amp;emsp;1) 在iconfont网站中选择图标，加入项目，产生代码
-&amp;emsp;2) 将产生的代码在html中通过link引用</code></pre><p>  &emsp;&emsp;<a href="http://at.alicdn.com/t/font_1328534_f3dyyeuoew.css" target="_blank" rel="noopener">http://at.alicdn.com/t/font_1328534_f3dyyeuoew.css</a>        </p>
-<pre><code>&amp;emsp;3) 应用css中定义好的类，来使用对应的图标</code></pre><ol start="2">
+<li><p>字体样式<br>  &emsp;font-family:&emsp;”微软雅黑”,”Microsoft YaHei”,”宋体”,serif;<br>  &emsp;font-size:&emsp;12px;&emsp;字体大小,浏览器默认字体为16px<br>  &emsp;font-weight:&emsp;bold;字体粗细 normal&amp;nbsp 正常 &amp;nbspbolder&amp;nbsp 变粗<br>  &emsp;font-style:&emsp;normal;是否开启斜体<br>  &emsp;line-height:&emsp;2em;行高【文本垂直居中】<br>  &emsp;font:&emsp;style weight size/line-height family;速写形式<br>  &emsp;网络字体:主要用于字体图标库（iconfont/fontawesome）<br>  使用步骤：<br>   1) 在iconfont网站中选择图标，加入项目，产生代码</p>
+<pre><code>2) 将产生的代码在html中通过link引用</code></pre><p>  <a href="http://at.alicdn.com/t/font_1328534_f3dyyeuoew.css" target="_blank" rel="noopener">http://at.alicdn.com/t/font_1328534_f3dyyeuoew.css</a>        </p>
+<pre><code>3) 应用css中定义好的类，来使用对应的图标</code></pre><ol start="2">
 <li><p>文本样式<br>color:&emsp;#333;字体颜色<br>text-align:&emsp;center    【文本水平居中】<br>text-decoration-line:<br>  &emsp;underline<br>  &emsp;line-through<br>  &emsp;overline<br>  &emsp;none<br>text-decoration-style:<br>  &emsp;solid<br>  &emsp;dotted<br>  &emsp;double<br>  &emsp;dashed<br>  &emsp;wavy<br>  &emsp;…<br>text-decoration-color:<br>  &emsp;颜色<br>&emsp;text-decoration:none:;字体装饰<br>&emsp;text-indent:2em;             文本缩进<br>&emsp;text-shadow:12px 2px 3px #ccc; 设置阴影</p>
 </li>
 <li><p>列表样式<br>&emsp;list-style-type<br>&emsp;&emsp;circle<br>&emsp;&emsp;square<br>&emsp;&emsp;…<br>&emsp;list-style-image<br>&emsp;&emsp;url(‘’)<br>&emsp;list-style-position<br>&emsp;&emsp;outside<br>&emsp;&emsp;inside<br>&emsp;list-style:none;</p>
@@ -280,7 +274,7 @@
                     </div>
                 
                     <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://jiangjun124.github.io/hexo-theme-anodyne" target="_blank">
+                        <a class="f3 f2-ns white dim" href="https://github.com/jiangjun124" target="_blank">
                             <i class="fa fa-github"></i>
                         </a>
                     </div>
